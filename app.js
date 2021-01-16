@@ -29,10 +29,10 @@ app.post("/", function(req, res) {
   }
 
   const jsonData = JSON.stringify(data);
-  const url = "https://us7.api.mailchimp.com/3.0/lists/06b257cd94";
+  const url = "https://us7.api.mailchimp.com/3.0/lists/<LIST_ID>";
   const options = {
     method: "POST",
-    auth: "sayak:954a809a80a1d99fbd4ee8ef1ca8b0fc-us7"
+    auth: "sayak:<API_KEY>"
   }
 
 
@@ -67,7 +67,3 @@ app.post("/failure", function(req, res) {
 app.listen(process.env.PORT || 2000, function() {
   console.log("Server is running on port 2000");
 });
-
-
-// API key=954a809a80a1d99fbd4ee8ef1ca8b0fc-us7
-// list-id=06b257cd94
